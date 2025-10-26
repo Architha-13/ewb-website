@@ -32,17 +32,24 @@ header h2 {
     margin-top: 10px;
 }
 
+#banner img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
 section {
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 900px;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h3 {
     color: #004d7a;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .speaker {
@@ -99,10 +106,7 @@ form button:hover {
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: #333;
     color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
