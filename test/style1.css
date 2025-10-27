@@ -1,0 +1,251 @@
+/* ----------------------------
+   GLOBAL STYLES
+----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f1ea; /* warm neutral background */
+  color: #2f3e46; /* muted dark text */
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  padding-top: 80px; /* space for fixed nav */
+}
+
+/* ----------------------------
+   NAVBAR
+----------------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0f5132; /* deep muted green */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f8f9f8;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #f8f9f8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d8c292; /* subtle accent */
+}
+
+/* ----------------------------
+   HERO SECTION
+----------------------------- */
+header.hero {
+  background: linear-gradient(to bottom, rgba(15,81,50,0.8), rgba(15,81,50,0.6)),
+              url("https://via.placeholder.com/1600x800") center/cover no-repeat;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-content img {
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #e2e2e2;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #d8c292;
+  color: #0f5132;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c9a353;
+}
+
+/* ----------------------------
+   SECTIONS
+----------------------------- */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+section:nth-child(even) {
+  background-color: #f4f1ea;
+}
+
+.about img {
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  width: 75%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ----------------------------
+   SCHEDULE
+----------------------------- */
+.schedule-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-top: 4px solid #0f5132;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* ----------------------------
+   SPEAKERS
+----------------------------- */
+.speaker-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.speaker-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 220px;
+  transition: all 0.3s ease;
+}
+
+.speaker-card:hover {
+  border-color: #0f5132;
+  transform: translateY(-8px);
+}
+
+.speaker-card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------
+   CRITERIA
+----------------------------- */
+.criteria {
+  background-color: #ffffff;
+  border-top: 5px solid #0f5132;
+  border-radius: 10px;
+  width: 85%;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.criteria h2 {
+  text-align: center;
+  color: #0f5132;
+  margin-bottom: 1.5rem;
+}
+
+.criteria li {
+  margin: 0.8rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #2f3e46;
+}
+
+.criteria li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: #0f5132;
+}
+
+/* ----------------------------
+   CONTACT & FOOTER
+----------------------------- */
+.contact .socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact a {
+  color: #0f5132;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #c9a353;
+}
+
+footer {
+  background: #0f5132;
+  color: #fafafa;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
