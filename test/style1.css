@@ -1,6 +1,3 @@
-/* ----------------------------
-   GLOBAL STYLES
------------------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -9,41 +6,85 @@
 }
 
 body {
-  background-color: #f4f1ea; /* warm neutral background */
-  color: #2f3e46; /* muted dark text */
+  background-color: #fff;
+  color: #111;
   scroll-behavior: smooth;
-  line-height: 1.6;
-  padding-top: 80px; /* space for fixed nav */
 }
 
-/* ----------------------------
-   NAVBAR
------------------------------ */
+/* header.hero {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+              url("https://via.placeholder.com/1600x800") center/cover no-repeat;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+header.hero {
+  position: relative;
+  height: 100vh;
+  color: #0f5132;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  overflow: hidden;
+  background-color: #f4f1ea;
+}
+
+header.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("test/images/logo.png") center/contain no-repeat;
+  opacity: 0.3;
+  z-index: 0;
+  animation: float 20s infinite linear alternate;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-40px); }
+}
+
+
+
+
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #0f5132; /* deep muted green */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 3rem;
+  background: rgba(0, 0, 0, 0.4);
 }
+
+/* .logo {
+  color: #00aa55;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: -5px; /* Move it slightly up} */
+
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #f8f9f8;
+  color: #00aa55;
   font-size: 1.5rem;
   font-weight: 600;
+  margin-top: -5px; /* adjust height */
 }
 
 .logo img {
-  height: 45px;
+  height: 45px; /* Adjust as needed (40–60px looks good) */
   width: auto;
 }
 
@@ -54,60 +95,39 @@ nav {
 }
 
 .nav-links a {
-  color: #f8f9f8;
+  color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #d8c292; /* subtle accent */
+  color: #00aa55;
 }
 
-/* ----------------------------
-   HERO SECTION
------------------------------ */
-header.hero {
-  background: linear-gradient(to bottom, rgba(15,81,50,0.8), rgba(15,81,50,0.6)),
-              url("https://via.placeholder.com/1600x800") center/cover no-repeat;
-  height: 100vh;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.hero-content {
   text-align: center;
-  padding: 0 2rem;
-}
-
-.hero-content img {
-  height: 100px;
-  margin-bottom: 1rem;
+  padding-bottom: 10%;
+  animation: fadeIn 1.5s ease;
 }
 
 .hero-content h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #e2e2e2;
 }
 
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  background-color: #d8c292;
-  color: #0f5132;
+  background-color: #00aa55;
+  color: white;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
+  margin: 15px;
 }
 
 .btn:hover {
-  background-color: #c9a353;
+  background-color: #007a3d;
 }
 
 /* ----------------------------
@@ -120,7 +140,7 @@ section {
 }
 
 section:nth-child(even) {
-  background-color: #f4f1ea;
+  background-color: #d5e2a1;
 }
 
 .about img {
@@ -191,7 +211,7 @@ section:nth-child(even) {
 ----------------------------- */
 .criteria {
   background-color: #ffffff;
-  border-top: 5px solid #0f5132;
+  border: 5px solid #0f5132;
   border-radius: 10px;
   width: 85%;
   margin: 3rem auto;
